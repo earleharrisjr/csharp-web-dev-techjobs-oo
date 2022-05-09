@@ -52,7 +52,8 @@ namespace TechJobsOO
 
 
 
-                jobOutput = $"\nID: {Id}\nName: {nameStr}\nEmployer: {employerNameStr}" +
+                jobOutput = $"\nID: {Id}" +
+                        $"\nName: {nameStr}\nEmployer: {employerNameStr}" +
                         $"\nLocation: {employerLocationStr}" +
                         $"\nPosition Type: {jobTypeStr}" +
                         $"\nCore Competency: {jobCoreCompetencyStr}";
