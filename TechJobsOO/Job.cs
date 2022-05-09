@@ -6,8 +6,8 @@ namespace TechJobsOO
         public int Id { get; }
         private static int nextId = 1;
 
-        public string Name { get; set; }
-        public Employer EmployerName { get; set; }
+        public string Name { get; set; } 
+        public Employer EmployerName { get; set; } 
         public Location EmployerLocation { get; set; }
         public PositionType JobType { get; set; }
         public CoreCompetency JobCoreCompetency { get; set; }
@@ -50,9 +50,32 @@ namespace TechJobsOO
             string jobTypeStr = JobType.Value;
             string jobCoreCompetencyStr = JobCoreCompetency.Value;
 
+            if (nameStr == "")
+            {
+                nameStr = "Data not available";
+            }
 
+            if (employerNameStr == "")
+            {
+                employerNameStr = "Data not available";
+            }
 
-                jobOutput = $"\nID: {Id}" +
+            if (employerLocationStr == "")
+            {
+                employerLocationStr = "Data not available";
+            }
+
+            if (jobTypeStr == "")
+            {
+                jobTypeStr = "Data not available";
+            }
+
+            if (jobCoreCompetencyStr == "")
+            {
+                jobCoreCompetencyStr = "Data not available";
+            }
+
+            jobOutput = $"\nID: {Id}" +
                         $"\nName: {nameStr}\nEmployer: {employerNameStr}" +
                         $"\nLocation: {employerLocationStr}" +
                         $"\nPosition Type: {jobTypeStr}" +
